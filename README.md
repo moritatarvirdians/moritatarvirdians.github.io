@@ -78,7 +78,7 @@ GitHub keeps redirecting `moritadataland.github.io` to the custom domain afterwa
 Run `python3 tools/build.py check` and work through what it prints. In short:
 
 - Replace every `class="ph"` placeholder block with a real `<img>`.
-- Replace `REPLACE_ME` in the Google Scholar links and `0000-0000-0000-0000` with your ORCID.
+- Replace `REPLACE_ME` in the Google Scholar links and `0000-0003-4246-0016` with your ORCID.
 - Replace `REPLACE_WITH_YOUR_FORM_ENDPOINT` on the two forms (see CONTENT-TODO.md).
 - Add `assets/files/morita-tarvirdians-cv.pdf`.
 - Add `assets/img/og-card.jpg` at 1200×630.

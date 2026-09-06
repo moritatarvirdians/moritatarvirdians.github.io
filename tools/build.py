@@ -109,7 +109,7 @@ def cmd_domain(new):
 PLACEHOLDERS = [
     "REPLACE_ME",
     "REPLACE_WITH_YOUR_FORM_ENDPOINT",
-    "0000-0000-0000-0000",
+    "0000-0003-4246-0016",
     'class="ph"',
 ]
 

@@ -15,7 +15,7 @@ Ordered by impact. The first block is what stands between this and being live.
 - [ ] **Google Scholar link.** Replace `REPLACE_ME` in the footer of every page (edit
       `_partials/footer.html`, then run `python3 tools/build.py sync`). If you have no Scholar profile,
       make one. It is one of the strongest `sameAs` signals for an academic entity.
-- [ ] **ORCID.** Replace `0000-0000-0000-0000`. Register free at orcid.org if you do not have one.
+- [ ] **ORCID.** Replace `0000-0003-4246-0016`. Register free at orcid.org if you do not have one.
 - [ ] **Defence year.** I wrote 2027 in three places. Change if that shifts.
 - [ ] **DataLand subscriber count.** The home page says "a few thousand learners". Make it accurate,
       and if the number is good, use the actual number instead.
