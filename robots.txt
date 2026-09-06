@@ -1,0 +1,8 @@
+# Everything is public and every crawler is welcome, including AI crawlers.
+# Blocking GPTBot / ClaudeBot / PerplexityBot removes you from AI answers.
+# That is a real cost when discovery increasingly runs through those answers.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://moritatarvirdians.com/sitemap.xml

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing — Morita Tarvirdians</title>
+    <link>https://moritatarvirdians.com/writing/</link>
+    <atom:link href="https://moritatarvirdians.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Essays on decisions, reflection, and what AI can and cannot see about human reasoning.</description>
+    <language>en</language>
+    <!-- Add a new <item> at the top each time you publish. Keep the newest first. -->
+    <item>
+      <title>Nine reasons behind one silence</title>
+      <link>https://moritatarvirdians.com/writing/nine-reasons-one-silence.html</link>
+      <guid>https://moritatarvirdians.com/writing/nine-reasons-one-silence.html</guid>
+      <pubDate>Sat, 06 Sep 2026 09:00:00 +0200</pubDate>
+      <description>An AI can see the shape of your thinking. It cannot see what the shape means. What 62 people told us about the gaps in their own reasoning.</description>
+    </item>
+  </channel>
+</rss>

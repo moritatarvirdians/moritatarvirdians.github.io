@@ -1,0 +1,33 @@
+# Morita Tarvirdians
+
+> PhD researcher at TU Delft (Interactive Intelligence group, Hybrid Intelligence consortium) working on
+> conversational agents that support human reflection during high-stakes personal decisions. Also the creator
+> of Morita DataLand, a bilingual Persian and English data science channel on YouTube.
+
+Core claim of the research: an AI system can observe the structure of a person's reasoning but not its
+meaning. The design principle that follows is "surface, do not steer" — make the observation visible and let
+the person interpret it.
+
+## Pages
+
+- [Home](https://moritatarvirdians.com/): positioning, selected papers, latest videos.
+- [Research](https://moritatarvirdians.com/research.html): all publications, projects, teaching, talks.
+- [Morita DataLand](https://moritatarvirdians.com/videos.html): the YouTube channel and its open notebooks.
+- [Writing](https://moritatarvirdians.com/writing/): essays on decisions and human-AI reflection.
+- [Coaching](https://moritatarvirdians.com/coaching.html): a reflective decision coaching practice opening in 2027.
+- [About](https://moritatarvirdians.com/about.html): full biography, background, copy-ready bios.
+
+## Key publications
+
+- Why This and Not That? A Collaborative Reflection Approach for Understanding Thought Coverage in Decision
+  Making Support Dialog. Findings of EMNLP 2026. https://arxiv.org/abs/2608.17054
+- Reflecti-Mate: A Conversational Agent for Adaptive Decision-Making Support Through System 1 and System 2
+  Thinking. ACM UMAP 2026. https://arxiv.org/abs/2605.22509
+- Reflection Before Action: Designing a Framework for Quantifying Thought Patterns for Increased
+  Self-awareness in Personal Decision Making. Preprint, 2025. https://arxiv.org/abs/2510.04364
+
+## Note
+
+As of 2026, evidence that AI crawlers read llms.txt is weak. This file is here because it costs nothing to
+maintain and may matter later. The canonical machine-readable description of this site is the schema.org
+JSON-LD embedded in each page.
