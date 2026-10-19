@@ -42,7 +42,7 @@
         "@type": "ScholarlyArticle",
         "name": "Reflecti-Mate: A Conversational Agent for Adaptive Decision-Making Support Through System 1 and System 2 Thinking",
         "datePublished": "2026",
-        "url": "https://arxiv.org/abs/2605.22509",
+        "url": "https://doi.org/10.1145/3774935.3806176",
         "author": { "@id": "https://moritatarvirdians.com/#person" },
         "isPartOf": { "@type": "Periodical", "name": "ACM UMAP 2026" }
       }},
@@ -52,14 +52,6 @@
         "datePublished": "2025",
         "url": "https://arxiv.org/abs/2510.04364",
         "author": { "@id": "https://moritatarvirdians.com/#person" }
-      }},
-      { "@type": "ListItem", "position": 4, "item": {
-        "@type": "ScholarlyArticle",
-        "name": "Towards creating a conversational memory for long-term meeting support: predicting memorable moments in multi-party conversations through eye-gaze",
-        "datePublished": "2022",
-        "url": "https://research.tudelft.nl/en/publications/",
-        "author": { "@id": "https://moritatarvirdians.com/#person" },
-        "isPartOf": { "@type": "Periodical", "name": "ICMI 2022" }
       }}
     ]
   }
@@ -129,36 +121,41 @@
 
     <ul class="pub-list" style="margin-top:2rem">
 
-      <!-- <li class="pub">
+      <li class="pub">
         <div class="pub__meta"><span class="pub__venue">Under review</span>2026</div>
         <div>
-          <h3 class="pub__title">Silent and collaborative steering in reflection support dialogue</h3>
-          <p class="pub__authors"><b>Morita Tarvirdians</b>, and co-authors</p>
-          <p class="pub__note">
-            A matched between-subjects study of two arrangements. In one the agent decides where the
-            conversation goes next. In the other it shows the person what it has noticed and lets them choose.
-            The two arrangements reach comparable coverage by the end of a session and get there by different
-            routes, which makes handing over control cheap in a task with no correct answer.
+          <h3 class="pub__title">Who Decides When to Move On? Human and AI Steering Authority in Decision Making Support Dialog</h3>
+          <p class="pub__authors"><b>Morita Tarvirdians</b>, Hayley Hung, Catharine Oertel</p>
+          <p class="pub__role">
+            <span class="pub__step">Steer</span>
+            Who should steer the reflection, the agent or the person?
           </p>
-          <p class="pub__links"><span class="chip">Preprint on acceptance</span></p>
+          <p class="pub__note">
+            Paper under review
+          </p>
         </div>
-      </li> -->
+      </li>
 
       <li class="pub">
         <div class="pub__meta"><span class="pub__venue">EMNLP Findings</span>2026</div>
         <div>
           <h3 class="pub__title"><a href="https://arxiv.org/abs/2608.17054">Why This and Not That? A Collaborative Reflection Approach for Understanding Thought Coverage in Decision Making Support Dialog</a></h3>
-          <p class="pub__authors"><b>Morita Tarvirdians</b>, Senthil Chandrasegaran, Hayley Hung, Catholijn M. Jonker, Catharine Oertel</p>
+          <p class="pub__authors"><b>Morita Tarvirdians</b>, Hayley Hung, Catharine Oertel</p>
+          <p class="pub__role">
+            <span class="pub__step">Interpret</span>
+            Why is a gap in someone's thinking there, and can the agent know?
+          </p>
           <p class="pub__note">
-            62 participants, 232 collaborative steering moments, 13 decision topics. A three-step protocol at
-            each steering point, recognition then interpretation then decision, yields a nine-category taxonomy
-            of what people mean by their own coverage gaps. Eight of those categories arise from a single
-            observable state, which is the clearest evidence for the interpretive gap in the thesis.
+            The first empirical characterisation of the interpretive gap, the distance between a pattern an
+            agent observes and the reason behind it. It contributes a nine-category taxonomy of the reasons
+            people give for their own coverage patterns. The same observable state produced eight different
+            reasons, so an agent cannot read meaning from behaviour alone. When people steer, they disagree
+            with the agent about direction, not about broadening.
           </p>
           <p class="pub__links">
-            <a class="chip" href="https://arxiv.org/abs/2608.17054">arXiv</a>
-            <a class="chip" href="#">PDF</a>
-            <a class="chip" href="#">BibTeX</a>
+            <a class="chip" href="https://arxiv.org/abs/2608.17054">Paper</a>
+            <!-- <a class="chip" href="#">PDF</a>
+            <a class="chip" href="#">BibTeX</a> -->
           </p>
         </div>
       </li>
@@ -166,17 +163,23 @@
       <li class="pub">
         <div class="pub__meta"><span class="pub__venue">ACM UMAP</span>2026</div>
         <div>
-          <h3 class="pub__title"><a href="https://arxiv.org/abs/2605.22509">Reflecti-Mate: A Conversational Agent for Adaptive Decision-Making Support Through System 1 and System 2 Thinking</a></h3>
+          <h3 class="pub__title"><a href="https://doi.org/10.1145/3774935.3806176">Reflecti-Mate: A Conversational Agent for Adaptive Decision-Making Support Through System 1 and System 2 Thinking</a></h3>
           <p class="pub__authors"><b>Morita Tarvirdians</b>, Senthil Chandrasegaran, Hayley Hung, Catholijn M. Jonker, Catharine Oertel</p>
+          <p class="pub__role">
+            <span class="pub__step">Adapt</span>
+            Can an agent model a reflection as it unfolds and adapt to it?
+          </p>
           <p class="pub__note">
-            The working system. A web-based agent keeps a knowledge base of what the person has said across
-            internal, external and experiential categories, computes a coverage indicator per category, and
-            redirects toward whichever is least covered.
+            An agent that models how a person spreads attention across internal, external and experiential
+            considerations, then adapts its questions to broaden and deepen reflection. Compared with the same
+            language model without this profile, it supported more holistic, integrative reflection while
+            keeping each person's own way of thinking instead of pulling everyone toward cognition.
           </p>
           <p class="pub__links">
-            <a class="chip" href="https://arxiv.org/abs/2605.22509">arXiv</a>
-            <a class="chip" href="https://research.tudelft.nl/en/publications/reflecti-mate-a-conversational-agent-for-adaptive-decision-making/">TU Delft</a>
-            <a class="chip" href="#">BibTeX</a>
+            <!-- <a class="chip" href="https://arxiv.org/abs/2605.22509">arXiv</a> -->
+            <a class="chip" href="https://doi.org/10.1145/3774935.3806176">Paper</a>
+            <!-- <a class="chip" href="https://research.tudelft.nl/en/publications/reflecti-mate-a-conversational-agent-for-adaptive-decision-making/">TU Delft</a>
+            <a class="chip" href="#">BibTeX</a> -->
           </p>
         </div>
       </li>
@@ -185,30 +188,19 @@
         <div class="pub__meta"><span class="pub__venue">Preprint</span>2025</div>
         <div>
           <h3 class="pub__title"><a href="https://arxiv.org/abs/2510.04364">Reflection Before Action: Designing a Framework for Quantifying Thought Patterns for Increased Self-awareness in Personal Decision Making</a></h3>
-          <p class="pub__authors"><b>Morita Tarvirdians</b>, and co-authors</p>
+          <p class="pub__authors"><b>Morita Tarvirdians</b>, Senthil Chandrasegaran, Hayley Hung, Catholijn M. Jonker, Catharine Oertel</p>
+          <p class="pub__role">
+            <span class="pub__step">Measure</span>
+            How do you measure reflection without judging what was said?
+          </p>
           <p class="pub__note">
-            The measurement layer everything else stands on. It formalises breadth and depth of reflection so
-            that an open conversation can be scored without judging the content of what was said.
+            A framework that turns an open reflection into measurable breadth and depth across seven
+            categories, with reliable coding (κ = .69 to .79). It shows that people rate their own reflection
+            higher than it measures, which is the gap the later agents are built to close.
           </p>
           <p class="pub__links">
-            <a class="chip" href="https://arxiv.org/abs/2510.04364">arXiv</a>
-            <a class="chip" href="https://www.alphaxiv.org/overview/2510.04364v1">Overview</a>
-          </p>
-        </div>
-      </li>
-
-      <li class="pub">
-        <div class="pub__meta"><span class="pub__venue">ICMI</span>2022</div>
-        <div>
-          <h3 class="pub__title"><a href="https://research.tudelft.nl/en/persons/morita-tarvirdians/">Towards creating a conversational memory for long-term meeting support: predicting memorable moments in multi-party conversations through eye-gaze</a></h3>
-          <p class="pub__authors">Marina Tsfasman, Kristian Fenech, <b>Morita Tarvirdians</b>, Andras Lorincz, Catholijn M. Jonker, Catharine Oertel</p>
-          <p class="pub__note">
-            Earlier work on multimodal conversation analysis, predicting which moments of a group conversation
-            people later remember from gaze behaviour alone.
-          </p>
-          <p class="pub__links">
-            <a class="chip" href="https://research.tudelft.nl/en/persons/morita-tarvirdians/">TU Delft</a>
-            <a class="chip" href="#">DOI</a>
+            <a class="chip" href="https://arxiv.org/abs/2510.04364">Paper</a>
+            <!-- <a class="chip" href="https://www.alphaxiv.org/overview/2510.04364v1">Overview</a> -->
           </p>
         </div>
       </li>
@@ -225,7 +217,7 @@
         <p class="card__tag">System</p>
         <h3>ReflectiMate</h3>
         <p>Web-based reflection agent with a live coverage model. Used in three studies with more than 230 participants in total.</p>
-        <a class="card__link" href="https://arxiv.org/abs/2605.22509">Paper</a>
+        <a class="card__link" href="https://doi.org/10.1145/3774935.3806176">Paper</a>
       </article>
       <article class="card">
         <p class="card__tag">Framework</p>
@@ -250,7 +242,7 @@
       <li><span class="yr">2022 &ndash; now</span><span><b>Head Teaching Assistant</b>, Conversational Agents <span class="det">&middot; MSc course, Interactive Intelligence</span></span></li>
       <li><span class="yr">2022 &ndash; 2023</span><span><b>Teaching Assistant</b>, Social Signal Processing seminar</span></li>
       <li><span class="yr">Ongoing</span><span><b>MSc thesis supervision</b> <span class="det">&middot; conversational agents, persona modelling, group deliberation</span></span></li>
-      <li><span class="yr">Ongoing</span><span><b>Reviewing</b> <span class="det">&middot; ACL/EMNLP cycles, CHI, IEEE Transactions on Affective Computing</span></span></li>
+      <li><span class="yr">Ongoing</span><span><b>Reviewing</b> <span class="det">&middot; ARR cycles, CHI, IUI, IEEE Transactions on Affective Computing</span></span></li>
       <li><span class="yr">2022 &ndash; now</span><span><b>Member</b>, Hybrid Intelligence Centre <span class="det">&middot; Dutch national research consortium</span></span></li>
     </ul>
 
@@ -268,12 +260,13 @@
     <p class="kicker">Presentations and outreach</p>
     <h2>Where this work has been shown</h2>
     <ul class="timeline" style="margin-top:1.5rem">
+      <li><span class="yr">2025</span><span><b>ICAI Exchange 2026</b>, Utrecht <span class="det">&middot; public outreach, hands-on session with ReflectiMate</span></span></li>
       <li><span class="yr">Oct 2026</span><span><b>ACL EMNLP 2026</b>, Budapest <span class="det">&middot; conference paper presentation</span></span></li>
       <li><span class="yr">June 2026</span><span><b>ACM UMAP 2026</b>, Gothenburg <span class="det">&middot; conference paper presentation, Reflecti-Mate</span></span></li>
-      <li><span class="yr">2025</span><span><b>Speech Science Festival</b>, Interspeech 2025 <span class="det">&middot; public outreach, demonstrating ReflectiMate</span></span></li>
-      <li><span class="yr">2022</span><span><b>ICMI 2022</b> <span class="det">&middot; co-author, presented by the lead author</span></span></li>
+      <li><span class="yr">2025</span><span><b>Speech Science Festival</b>, Interspeech 2025, Rotterdam <span class="det">&middot; public outreach, hands-on session with ReflectiMate</span></span></li>
+      <!-- <li><span class="yr">2022</span><span><b>ICMI 2022</b> <span class="det">&middot; co-author, presented by the lead author</span></span></li> -->
     </ul>
-    <p class="small muted" style="margin-top:1.5rem">Available for talks on human-AI reflection, conversational agents and research design. <a href="mailto:M.Tarvirdians@tudelft.nl">Get in touch</a>.</p>
+    <p class="small muted" style="margin-top:1.5rem">Available for talks on human-AI (collaborative) reflection and demonstration of ReflectiMate. <a href="mailto:M.Tarvirdians@tudelft.nl">Get in touch</a>.</p>
   </section>
 
 </main>
@@ -318,7 +311,7 @@
     </div>
     <div class="colophon">
       <span>&copy; 2026 Morita Tarvirdians</span>
-      <span>Built as plain HTML and CSS. <a href="https://github.com/MoritaDataLand">Source</a></span>
+      <!-- <span>Built as plain HTML and CSS. <a href="https://github.com/MoritaDataLand">Source</a></span> -->
     </div>
   </div>
 </footer>

@@ -7,11 +7,9 @@ Ordered by impact. The first block is what stands between this and being live.
 ## 1. Before launch (about two hours of work)
 
 ### Facts to verify or fix
-- [ ] **Author list on the ICMI 2022 paper.** I placed your name third from the TU Delft portal listing.
-      Check the actual order and fix it in `research.html`.
-- [ ] **Co-authors on the PROBE preprint** (`arXiv:2510.04364`). Currently reads "and co-authors".
-- [ ] **The under-review IUI paper.** I gave it a neutral working title. Replace or remove it. Do not
-      name the venue while it is under blind review.
+- [x] **Author list on the ICMI 2022 paper.** Resolved: the ICMI paper was removed from the site.
+- [x] **Co-authors on the PROBE preprint** (`arXiv:2510.04364`). Filled in on `research.html` and `index.html`.
+- [x] **The under-review IUI paper.** Replaced with the real title, venue not named.
 - [ ] **Google Scholar link.** Replace `REPLACE_ME` in the footer of every page (edit
       `_partials/footer.html`, then run `python3 tools/build.py sync`). If you have no Scholar profile,
       make one. It is one of the strongest `sameAs` signals for an academic entity.
