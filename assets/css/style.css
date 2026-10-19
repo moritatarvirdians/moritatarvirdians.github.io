@@ -118,6 +118,32 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: var(--pad-block) 0; }
 .section { padding-block: var(--pad-block); }
 .section + .section { border-top: 1px solid var(--rule); }
 .stack > * + * { margin-top: var(--gap); }
+
+/* Editorial split: on wide screens, section headings sit in a left rail and the
+   content fills the right column, so the page reads full width while lines stay
+   near a comfortable measure. Pure placement, no extra markup:
+   - "kicker + h2 + content" sections
+   - prose blocks that alternate h2 and paragraphs
+   Card grids and bands span both columns beneath the heading row. */
+@media (min-width: 960px) {
+  section.section:has(> .kicker),
+  section.section > .prose:not(.band):has(> h2) {
+    display: grid; column-gap: clamp(2.5rem, 5vw, 4.5rem); row-gap: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr);
+    max-width: none;
+  }
+  section.section:has(> .kicker) > *,
+  section.section > .prose:has(> h2) > * { grid-column: 2; max-width: var(--measure); }
+  section.section:has(> .kicker) > :is(.kicker, h2),
+  section.section > .prose:has(> h2) > h2 { grid-column: 1; max-width: none; }
+  section.section:has(> .kicker) > h2,
+  section.section > .prose:has(> h2) > h2 { grid-row: span 3; align-self: start; font-size: var(--step-2); }
+  section.section:has(> .kicker) > h2 + * { margin-top: 0 !important; }
+  section.section > .prose > h2:not(:first-child),
+  section.section > .prose > h2:not(:first-child) + * { margin-top: 2.25rem; }
+  section.section:has(> .kicker) > :is(.grid, .band, .photo-strip) { grid-column: 1 / -1; max-width: none; }
+  section.section:has(> .kicker) .pub__note { max-width: none; }
+}
 .grid { display: grid; gap: 1.5rem; }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); }
