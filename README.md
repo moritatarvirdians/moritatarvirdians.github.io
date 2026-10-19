@@ -1,3 +1,6 @@
+# Personal Website
+
+<!--
 # moritatarvirdians.com
 
 Personal site: academic work, the Morita DataLand YouTube channel, writing, and a coaching practice
@@ -93,3 +96,5 @@ Colours, fonts and spacing are all CSS custom properties in the `:root` block at
 To add a blog post: copy `writing/nine-reasons-one-silence.html`, change the content and the JSON-LD,
 add a row to `writing/index.html`, add an `<item>` to `feed.xml`, then run
 `python3 tools/build.py sitemap`.
+
+-->
