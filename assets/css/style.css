@@ -212,6 +212,8 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: var(--pad-block) 0; }
 }
 .hero h1 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.025em; margin-bottom: .35em; }
 .lede { font-size: var(--step-1); color: var(--ink-muted); max-width: 46ch; line-height: 1.5; }
+/* Single-column heroes (no portrait): title and lede share one width so their edges line up. */
+.hero > .wrap:not(.hero__grid) > :is(h1, .lede) { max-width: 52rem; }
 .portrait {
   border-radius: var(--radius); overflow: hidden; background: var(--bg-sunken);
   aspect-ratio: 4 / 5; box-shadow: var(--shadow); border: 1px solid var(--rule);
