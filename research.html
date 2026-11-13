@@ -57,6 +57,19 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "ReflectiMate demo: five steps through the interface",
+  "description": "A 95-second silent walkthrough of ReflectiMate: unaided reflection, the agent's coverage model, the recognition and interpretation steps, and the user's choice of direction.",
+  "thumbnailUrl": "https://moritatarvirdians.com/assets/img/poster-demo-loop.jpg",
+  "contentUrl": "https://moritatarvirdians.com/assets/video/reflectimate-demo.mp4",
+  "uploadDate": "2026-11-13",
+  "duration": "PT1M35S",
+  "creator": { "@id": "https://moritatarvirdians.com/#person" }
+}
+</script>
 </head>
 <body>
 <!-- #header -->
@@ -226,6 +239,7 @@
         <h3>ReflectiMate</h3>
         <p>Web-based reflection agent with a live coverage model. Used in three studies with more than 230 participants in total.</p>
         <a class="card__link" href="https://doi.org/10.1145/3774935.3806176">Paper</a>
+        <a class="card__link" href="#demo">Watch the demo</a>
       </article>
       <article class="card">
         <p class="card__tag">Framework</p>
@@ -240,6 +254,21 @@
         <span class="small muted" style="margin-top:1rem">Target: ARR, November 2026</span>
       </article> -->
     </div>
+  </section>
+
+  <!-- ===== Demo ===== -->
+  <section class="section wrap" id="demo">
+    <p class="kicker">ReflectiMate</p>
+    <h2>How it works, step by step</h2>
+    <figure style="margin-top:2rem">
+      <video src="/assets/video/reflectimate-demo.mp4" poster="/assets/img/poster-demo-loop.jpg" controls muted loop playsinline preload="none" style="width:100%;border-radius:var(--radius);border:1px solid var(--rule);display:block">
+        Your browser cannot play this video.
+      </video>
+      <figcaption class="small muted" style="margin-top:.8rem">
+        Five steps through the live interface: you reflect unaided, the agent shows its coverage model, you say
+        whether you recognise the pattern and why, then you pick the next direction. Silent, with on-screen text.
+      </figcaption>
+    </figure>
   </section>
 
   <!-- ===== Teaching + service ===== -->
