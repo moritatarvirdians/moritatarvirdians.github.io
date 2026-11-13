@@ -10,12 +10,12 @@ the person interpret it.
 
 ## Pages
 
-- [Home](https://moritatarvirdians.com/): positioning, selected papers, latest videos.
-- [Research](https://moritatarvirdians.com/research.html): all publications, projects, teaching, talks.
-- [Morita DataLand](https://moritatarvirdians.com/videos.html): the YouTube channel and its open notebooks.
-- [Writing](https://moritatarvirdians.com/writing/): essays on decisions and human-AI reflection.
-- [Coaching](https://moritatarvirdians.com/coaching.html): a reflective decision coaching practice opening in 2027.
-- [About](https://moritatarvirdians.com/about.html): full biography, background, copy-ready bios.
+- [Home](https://moritatarvirdians.github.io/): positioning, selected papers, latest videos.
+- [Research](https://moritatarvirdians.github.io/research.html): all publications, projects, teaching, talks.
+- [Morita DataLand](https://moritatarvirdians.github.io/videos.html): the YouTube channel and its open notebooks.
+- [Writing](https://moritatarvirdians.github.io/writing/): essays on decisions and human-AI reflection.
+- [Coaching](https://moritatarvirdians.github.io/coaching.html): a reflective decision coaching practice opening in 2027.
+- [About](https://moritatarvirdians.github.io/about.html): full biography, background, copy-ready bios.
 
 ## Key publications
 

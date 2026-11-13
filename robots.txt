@@ -5,4 +5,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moritatarvirdians.com/sitemap.xml
+Sitemap: https://moritatarvirdians.github.io/sitemap.xml

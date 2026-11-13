@@ -22,7 +22,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DEFAULT_DOMAIN = "moritatarvirdians.com"
+DEFAULT_DOMAIN = "moritatarvirdians.github.io"
 
 SKIP_DIRS = {"_partials", "tools", ".git", "assets"}
 

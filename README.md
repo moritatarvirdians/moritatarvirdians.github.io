@@ -1,7 +1,7 @@
 # Personal Website
 
 <!--
-# moritatarvirdians.com
+# moritatarvirdians.github.io
 
 Personal site: academic work, the Morita DataLand YouTube channel, writing, and a coaching practice
 that opens after the PhD defence.
