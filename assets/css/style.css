@@ -319,6 +319,9 @@ font font { background: none !important; box-shadow: none !important; }
   .hero__grid > :only-child > .lede { grid-row: 2; padding-top: .45em; }
   .hero > .wrap:not(.hero__grid, .prose) > .btn-row,
   .hero__grid > :only-child > .btn-row { grid-row: 3; }
+  /* Nothing for the right column (e.g. lede commented out): let the title take the full band. */
+  .hero > .wrap:not(.hero__grid, .prose):not(:has(> .lede, > .btn-row)) > h1,
+  .hero__grid > :only-child:not(:has(> .lede, > .btn-row)) > h1 { grid-column: 1 / -1; grid-row: auto; max-width: none; }
 }
 .portrait {
   border-radius: var(--radius); overflow: hidden; background: var(--bg-sunken);
