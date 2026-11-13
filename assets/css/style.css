@@ -485,3 +485,55 @@ font font { background: none !important; box-shadow: none !important; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 .scroll-x { overflow-x: auto; }
+
+/* ---------- 15. CV ---------- */
+/* cv.html is the source of the CV; the PDF is printed from it (tools/build.py cv). */
+.cv-contact { color: var(--ink-muted); font-size: var(--step--1); margin: 0; }
+.cv-list { list-style: none; padding: 0; margin: 0; }
+.cv-list > li { display: grid; gap: .1rem 1.5rem; padding-block: .9rem; border-top: 1px solid var(--rule); }
+@media (min-width: 640px) { .cv-list > li { grid-template-columns: 8rem minmax(0, 1fr); } }
+.cv-list .yr { color: var(--ink-faint); font-family: var(--font-serif); font-style: italic; font-variant-numeric: oldstyle-nums proportional-nums; }
+.cv-list b { font-weight: 600; }
+.cv-list .det { display: block; color: var(--ink-muted); font-size: var(--step--1); font-style: italic; }
+.cv-list ul, .cv-bullets { padding-inline-start: 1.1rem; margin: .4rem 0 0; }
+.cv-list ul li, .cv-bullets li { margin-bottom: .3rem; }
+.cv-refs { padding-inline-start: 1.4rem; margin: 0; }
+.cv-refs li { margin-bottom: .7rem; }
+.cv-refs a { overflow-wrap: anywhere; }
+.cv-sub { font-size: var(--step-0); margin: 1.6rem 0 .4rem; }
+.cv-sub:first-of-type { margin-top: .4rem; }
+
+/* Print turns any page into a plain document; on cv.html this is what produces the PDF. */
+@media print {
+  :root:root, :root:root[data-theme] {
+    --bg: #fff; --bg-raised: #fff; --bg-sunken: #fff;
+    --ink: #1a1a19; --ink-muted: #45433f; --ink-faint: #6b6862;
+    --rule: #e2ded7; --rule-strong: #cbc5ba;
+    --accent: #1f5f57; --accent-soft: #e4f0ed; --accent-ink: #133b36;
+  }
+  @page { size: A4; margin: 15mm 16mm; }
+  html { font-size: 9.5pt; }
+  body { font-size: 1rem; line-height: 1.45; }
+  body::before, .hero::before, .skip, .site-head, .site-foot, .btn-row, .theme-toggle { display: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .wrap { width: auto; }
+  .hero { padding: 0 0 .6rem; overflow: visible; }
+  .hero h1 { font-size: 2.2rem; margin-bottom: .15em; }
+  .eyebrow { display: none; }
+  .lede { font-size: 1.1rem; max-width: none; margin-bottom: .3rem; }
+  .section { padding-block: .8rem; break-inside: auto; }
+  .section + .section { border-top: 0; }
+  .kicker { display: none; }
+  h2 { font-size: 1.15rem; font-family: var(--font-sans); font-weight: 600; text-transform: uppercase;
+       letter-spacing: .06em; color: var(--accent); border-bottom: 1px solid var(--rule-strong);
+       padding-bottom: .2rem; margin-bottom: .5rem; break-after: avoid; }
+  h3, .cv-sub { break-after: avoid; }
+  .cv-list > li { grid-template-columns: 7.5rem minmax(0, 1fr); padding-block: .45rem; border-top: 0; }
+  .cv-list > li > div > :is(b, .det) { break-after: avoid; }
+  .cv-list ul li { break-inside: avoid; }
+  .cv-list .yr { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .cv-refs li, .cv-bullets li { break-inside: avoid; }
+  .cv-sub { margin-top: .8rem; }
+  a { color: inherit; text-decoration: none; }
+  .cv-contact a, .cv-refs a { color: var(--accent); }
+}

@@ -19,6 +19,7 @@ videos.html           Morita DataLand
 writing/              Blog index + posts
 coaching.html         Coaching practice (dormant until 2027)
 about.html            Bio, background, personal, press kit
+cv.html               CV. Source of the PDF: edit here, then `python3 tools/build.py cv`
 404.html
 feed.xml              RSS for writing/ — add an <item> per post
 robots.txt            Everything allowed, including AI crawlers
@@ -27,7 +28,7 @@ llms.txt              Optional AI-crawler summary
 assets/css/style.css  Single stylesheet. All colours are tokens at the top.
 assets/js/main.js     Theme toggle + nav highlighting. Site works without it.
 assets/img/           Photos, favicon, OG card
-assets/files/         CV PDF
+assets/files/         CV PDF, generated from cv.html
 _partials/            Shared header + footer, pushed into pages by build.py sync
 tools/build.py        sync | sitemap | domain | check
 ```
@@ -40,6 +41,7 @@ python3 tools/build.py sitemap              # after adding or removing a page
 python3 tools/build.py check                # find leftover placeholders and broken local links
 python3 tools/build.py domain example.com   # move to a different domain in one go
 python3 tools/build.py all                  # all three
+python3 tools/build.py cv              # regenerate the CV PDF from cv.html (needs Chrome)
 ```
 
 Preview locally:
@@ -86,7 +88,6 @@ Run `python3 tools/build.py check` and work through what it prints. In short:
 - Replace every `class="ph"` placeholder block with a real `<img>`.
 - Replace `REPLACE_ME` in the Google Scholar links and `0000-0003-4246-0016` with your ORCID.
 - Replace `REPLACE_WITH_YOUR_FORM_ENDPOINT` on the two forms (see CONTENT-TODO.md).
-- Add `assets/files/morita-tarvirdians-cv.pdf`.
 - Add `assets/img/og-card.jpg` at 1200×630.
 
 Then submit the sitemap in Google Search Console and Bing Webmaster Tools.

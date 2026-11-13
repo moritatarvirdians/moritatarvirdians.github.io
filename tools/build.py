@@ -9,6 +9,7 @@ Usage:
     python3 tools/build.py check           # look for leftover placeholders and broken local links
     python3 tools/build.py all             # sync + sitemap + check
     python3 tools/build.py serve [PORT]    # local preview server (default 8000), with video seeking
+    python3 tools/build.py cv              # print cv.html to assets/files/morita-tarvirdians-cv.pdf
 
 Why a script instead of a static site generator: the pages ship as plain HTML, which is what
 AI crawlers and search engines read most reliably, and there is nothing to break when a
@@ -195,6 +196,49 @@ def cmd_serve(port=8000):
             pass
 
 
+CV_PDF = ROOT / "assets" / "files" / "morita-tarvirdians-cv.pdf"
+CHROMES = [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+    "google-chrome", "chromium", "chromium-browser",
+]
+
+
+def cmd_cv():
+    """Print cv.html to PDF with headless Chrome. The page links its CSS root-relative, so it is
+    served over a throwaway local server rather than opened as a file."""
+    import functools
+    import http.server
+    import shutil
+    import subprocess
+    import threading
+
+    chrome = next((c for c in CHROMES if pathlib.Path(c).exists() or shutil.which(c)), None)
+    if not chrome:
+        print("cv: no Chrome, Chromium or Edge found. Open /cv.html and use Print > Save as PDF instead.")
+        sys.exit(1)
+
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *args):
+            pass
+
+    handler = functools.partial(Quiet, directory=str(ROOT))
+    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    CV_PDF.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        subprocess.run(
+            [chrome, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+             "--virtual-time-budget=5000", f"--print-to-pdf={CV_PDF}",
+             f"http://127.0.0.1:{httpd.server_port}/cv.html"],
+            check=True, capture_output=True,
+        )
+    finally:
+        httpd.shutdown()
+    print(f"cv: wrote {CV_PDF.relative_to(ROOT)}")
+
+
 def main():
     args = sys.argv[1:]
     cmd = args[0] if args else "all"
@@ -212,6 +256,8 @@ def main():
         cmd_check()
     elif cmd == "serve":
         cmd_serve(int(args[1]) if len(args) > 1 else 8000)
+    elif cmd == "cv":
+        cmd_cv()
     else:
         print(__doc__)
         sys.exit(1)
