@@ -45,9 +45,12 @@ python3 tools/build.py all                  # all three
 Preview locally:
 
 ```bash
-python3 -m http.server 8000
+python3 tools/build.py serve
 # then open http://localhost:8000
 ```
+
+Avoid plain `python3 -m http.server` for this: it ignores Range requests, and Safari will not play
+the `<video>` elements without them. GitHub Pages handles ranges, so the live site is unaffected.
 
 Use the local server rather than opening the file directly. Every internal link is root-relative
 (`/research.html`), which only resolves over HTTP.

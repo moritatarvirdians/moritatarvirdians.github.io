@@ -8,6 +8,7 @@ Usage:
     python3 tools/build.py domain NEW.COM  # rewrite every absolute URL to a new domain
     python3 tools/build.py check           # look for leftover placeholders and broken local links
     python3 tools/build.py all             # sync + sitemap + check
+    python3 tools/build.py serve [PORT]    # local preview server (default 8000), with video seeking
 
 Why a script instead of a static site generator: the pages ship as plain HTML, which is what
 AI crawlers and search engines read most reliably, and there is nothing to break when a
@@ -140,6 +141,60 @@ def cmd_check():
     print(f"check: {problems} item(s) to look at (placeholders are expected until you fill them in)")
 
 
+def cmd_serve(port=8000):
+    """Like `python3 -m http.server`, but answers Range requests. Safari will not play
+    <video> without them; GitHub Pages supports them, so this only matters locally."""
+    import functools
+    import http.server
+    import os
+
+    class Handler(http.server.SimpleHTTPRequestHandler):
+        def send_head(self):
+            self.remaining = None
+            rng =re.fullmatch(r"bytes=(\d*)-(\d*)", self.headers.get("Range", ""))
+            path = self.translate_path(self.path)
+            if not rng or not os.path.isfile(path):
+                return super().send_head()
+            size = os.path.getsize(path)
+            start, end = rng.groups()
+            if start:
+                start, end = int(start), min(int(end) if end else size - 1, size - 1)
+            else:
+                start, end = max(size - int(end or 0), 0), size - 1
+            if start > end:
+                self.send_error(416)
+                return None
+            f = open(path, "rb")
+            f.seek(start)
+            self.remaining = end - start + 1
+            self.send_response(206)
+            self.send_header("Content-Type", self.guess_type(path))
+            self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+            self.send_header("Content-Length", str(self.remaining))
+            self.send_header("Accept-Ranges", "bytes")
+            self.end_headers()
+            return f
+
+        def copyfile(self, source, outputfile):
+            remaining = getattr(self, "remaining", None)
+            if remaining is None:
+                return super().copyfile(source, outputfile)
+            while remaining > 0:
+                chunk = source.read(min(64 * 1024, remaining))
+                if not chunk:
+                    break
+                outputfile.write(chunk)
+                remaining -= len(chunk)
+
+    handler = functools.partial(Handler, directory=str(ROOT))
+    with http.server.ThreadingHTTPServer(("", port), handler) as httpd:
+        print(f"serving {ROOT} at http://localhost:{port}  (Ctrl+C to stop)")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            pass
+
+
 def main():
     args = sys.argv[1:]
     cmd = args[0] if args else "all"
@@ -155,6 +210,8 @@ def main():
         cmd_sync()
         cmd_sitemap()
         cmd_check()
+    elif cmd == "serve":
+        cmd_serve(int(args[1]) if len(args) > 1 else 8000)
     else:
         print(__doc__)
         sys.exit(1)
