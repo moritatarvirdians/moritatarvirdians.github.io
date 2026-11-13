@@ -72,7 +72,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap site-head__inner">
-    <a class="brand" href="/">Morita <span>Tarvirdians</span></a>
+    <a class="brand notranslate" href="/" translate="no">Morita <span>Tarvirdians</span></a>
     <nav class="nav" aria-label="Primary">
       <a href="/research.html">Research</a>
       <a href="/videos.html">DataLand</a>
@@ -80,12 +80,18 @@
       <!-- <a href="/coaching.html">Coaching</a> -->
       <a href="/about.html">About</a>
     </nav>
+    <div class="lang notranslate" role="group" aria-label="Language" translate="no">
+      <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fa" lang="fa" aria-pressed="false" title="فارسی (ترجمهٔ خودکار)">فا</button>
+      <button type="button" data-lang="hy" lang="hy" aria-pressed="false" title="Հայերեն (ավտոմատ թարգմանություն)">Հայ</button>
+    </div>
+    <div id="gt" hidden></div>
     <button class="theme-toggle" type="button" aria-label="Switch theme">☾</button>
   </div>
 </header>
 <!-- /#header -->
 
-<main id="main">
+<main id="main" class="tone-warm">
 
   <section class="hero">
     <div class="wrap hero__grid">
@@ -108,7 +114,7 @@
   <section class="section wrap">
     <div class="prose">
       <h2>The short version</h2>
-      <p>
+      <p class="dropcap">
         I did my bachelor's in Information Technology Engineering and my master's in Computer Engineering, artificial intelligence and robotics, at the University of Tabriz. My master's work was in affective
         computing, which is where the interest in what machines can and cannot read about a person started.
         From 2017 I worked as an NLP researcher and a data scientist in industry.
@@ -125,7 +131,6 @@
 
       <h2>Why decisions</h2>
       <p>
-      <p>
         Moving countries is a decision you make once with incomplete information and then live inside
         for years. So is leaving a job, or staying in one. What struck me at the time was not that the
         choice was hard. It was that I had no view of how I was thinking about it. Nobody could tell me
@@ -133,7 +138,9 @@
         mirror to the shape of the thinking itself, to show me how I was reasoning about the decision
         and why I was reasoning that way.
       </p>
-      </p>
+      <blockquote class="pullquote">
+        <p>What would have helped was someone holding up a mirror to the shape of the thinking itself.</p>
+      </blockquote>
       <p>
         That is what my papers have been building toward. The agent does the half a person cannot
         do mid-conversation, tracking how attention has been distributed across different
@@ -175,8 +182,7 @@
 
   <!-- ===== Facts ===== -->
   <section class="section wrap">
-    <p class="kicker">Quick facts</p>
-    <h2>The details</h2>
+    <p class="kicker">BIO</p>
     <ul class="timeline" style="margin-top:1.5rem">
       <li><span class="yr">Now</span><span><b>PhD researcher</b>, Interactive Intelligence, TU Delft <span class="det">&middot; defending 2027</span></span></li>
       <li><span class="yr">2022 &ndash; now</span><span><b>Hybrid Intelligence Centre</b> <span class="det">&middot; Dutch national consortium on human-AI collaboration</span></span></li>
