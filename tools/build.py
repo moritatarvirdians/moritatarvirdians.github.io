@@ -230,6 +230,7 @@ def cmd_cv():
     try:
         subprocess.run(
             [chrome, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+             *(["--no-sandbox"] if sys.platform.startswith("linux") else []),
              "--virtual-time-budget=5000", f"--print-to-pdf={CV_PDF}",
              f"http://127.0.0.1:{httpd.server_port}/cv.html"],
             check=True, capture_output=True,

@@ -1,0 +1,31 @@
+# Rebuilds assets/files/morita-tarvirdians-cv.pdf from cv.html whenever the CV or the
+# stylesheet changes, so the "Download PDF" button always serves the current version.
+name: Build CV PDF
+
+on:
+  push:
+    branches: [main]
+    paths: [cv.html, assets/css/style.css, tools/build.py]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print cv.html to PDF
+        run: python3 tools/build.py cv
+      - name: Commit the PDF if it changed
+        run: |
+          git add assets/files/morita-tarvirdians-cv.pdf
+          if git diff --cached --quiet; then
+            echo "PDF unchanged"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Rebuild CV PDF from cv.html"
+            git push
+          fi
