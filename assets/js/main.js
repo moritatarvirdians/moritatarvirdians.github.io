@@ -108,6 +108,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    if (!document.querySelector(".lang")) return;   // switcher is commented out in the header
     var lang = chosenLang();
     markLang(lang);
     if (lang !== "en") { loadFonts(lang); loadTranslate(); }
