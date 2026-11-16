@@ -188,6 +188,11 @@ body::before {
   /* A note after a full-width grid has nothing to sit beside either, so it starts at the left edge. */
   section.section:has(> .kicker) > :is(.grid, .band, .photo-strip) ~ :not(.grid, .band, .photo-strip) { grid-column: 1 / -1; }
   section.section:has(> .kicker) .pub__note { max-width: none; }
+  /* Opt out of the split: headline on its own row, the text beneath it. */
+  section.section.section--stacked:has(> .kicker) > :is(.kicker, h2, p) {
+    grid-column: 1 / -1; grid-row: auto; max-width: var(--measure);
+  }
+  section.section.section--stacked:has(> .kicker) > h2 + p { margin-top: 1rem !important; }
 }
 .grid { display: grid; gap: 1.5rem; }
 .grid + p { margin-top: 2rem; }
