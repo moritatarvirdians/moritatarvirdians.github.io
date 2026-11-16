@@ -10,7 +10,7 @@ the person interpret it.
 
 ## Pages
 
-- [Home](https://moritatarvirdians.github.io/): positioning, selected papers, latest videos.
+- [Home](https://moritatarvirdians.github.io/): how conversational AI can help people think through hard decisions; selected papers, latest videos.
 - [Research](https://moritatarvirdians.github.io/research.html): all publications, projects, teaching, talks.
 - [Morita DataLand](https://moritatarvirdians.github.io/videos.html): the YouTube channel and its open notebooks.
 - [Writing](https://moritatarvirdians.github.io/writing/): essays on decisions and human-AI reflection.
@@ -20,9 +20,9 @@ the person interpret it.
 ## Key publications
 
 - Why This and Not That? A Collaborative Reflection Approach for Understanding Thought Coverage in Decision
-  Making Support Dialog. Findings of EMNLP 2026. https://arxiv.org/abs/2608.17054
+  Making Support Dialog. Findings of EMNLP 2026. https://aclanthology.org/2026.findings-emnlp.1063.pdf
 - Reflecti-Mate: A Conversational Agent for Adaptive Decision-Making Support Through System 1 and System 2
-  Thinking. ACM UMAP 2026. https://arxiv.org/abs/2605.22509
+  Thinking. ACM UMAP 2026. https://doi.org/10.1145/3774935.3806176
 - Reflection Before Action: Designing a Framework for Quantifying Thought Patterns for Increased
   Self-awareness in Personal Decision Making. Preprint, 2025. https://arxiv.org/abs/2510.04364
 

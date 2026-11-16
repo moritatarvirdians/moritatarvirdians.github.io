@@ -4,16 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research — Morita Tarvirdians</title>
-<meta name="description" content="Publications, projects and teaching by Morita Tarvirdians.">
+<meta name="description" content="Publications, projects and teaching by Morita Tarvirdians (TU Delft): conversational agents that measure and support reflection in high-stakes personal decisions, including ReflectiMate (ACM UMAP 2026) and EMNLP Findings 2026.">
 <link rel="canonical" href="https://moritatarvirdians.github.io/research.html">
 <meta name="theme-color" content="#1f5f57" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
-<meta property="og:type" content="profile">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Morita Tarvirdians">
 <meta property="og:title" content="Research — Morita Tarvirdians">
 <meta property="og:description" content="My research on supporting reflection in high-stakes personal decisions through dialog.">
 <meta property="og:url" content="https://moritatarvirdians.github.io/research.html">
 <meta property="og:image" content="https://moritatarvirdians.github.io/assets/img/og-card.jpg">
+<meta property="og:image:alt" content="Morita Tarvirdians">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MDataland">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -26,6 +29,7 @@
   "@type": "CollectionPage",
   "url": "https://moritatarvirdians.github.io/research.html",
   "name": "Research — Morita Tarvirdians",
+  "isPartOf": { "@id": "https://moritatarvirdians.github.io/#website" },
   "about": { "@id": "https://moritatarvirdians.github.io/#person" },
   "mainEntity": {
     "@type": "ItemList",
@@ -35,7 +39,12 @@
         "name": "Why This and Not That? A Collaborative Reflection Approach for Understanding Thought Coverage in Decision Making Support Dialog",
         "datePublished": "2026",
         "url": "https://aclanthology.org/2026.findings-emnlp.1063.pdf",
-        "author": { "@id": "https://moritatarvirdians.github.io/#person" },
+        "author": [
+          { "@id": "https://moritatarvirdians.github.io/#person" },
+          { "@type": "Person", "name": "Hayley Hung" },
+          { "@type": "Person", "name": "Catharine Oertel" }
+        ],
+        "sameAs": "https://arxiv.org/abs/2608.17054",
         "isPartOf": { "@type": "Periodical", "name": "Findings of EMNLP 2026" }
       }},
       { "@type": "ListItem", "position": 2, "item": {
@@ -43,7 +52,14 @@
         "name": "Reflecti-Mate: A Conversational Agent for Adaptive Decision-Making Support Through System 1 and System 2 Thinking",
         "datePublished": "2026",
         "url": "https://doi.org/10.1145/3774935.3806176",
-        "author": { "@id": "https://moritatarvirdians.github.io/#person" },
+        "author": [
+          { "@id": "https://moritatarvirdians.github.io/#person" },
+          { "@type": "Person", "name": "Senthil Chandrasegaran" },
+          { "@type": "Person", "name": "Hayley Hung" },
+          { "@type": "Person", "name": "Catholijn M. Jonker" },
+          { "@type": "Person", "name": "Catharine Oertel" }
+        ],
+        "sameAs": "https://arxiv.org/abs/2605.22509",
         "isPartOf": { "@type": "Periodical", "name": "ACM UMAP 2026" }
       }},
       { "@type": "ListItem", "position": 3, "item": {
@@ -51,7 +67,13 @@
         "name": "Reflection Before Action: Designing a Framework for Quantifying Thought Patterns for Increased Self-awareness in Personal Decision Making",
         "datePublished": "2025",
         "url": "https://arxiv.org/abs/2510.04364",
-        "author": { "@id": "https://moritatarvirdians.github.io/#person" }
+        "author": [
+          { "@id": "https://moritatarvirdians.github.io/#person" },
+          { "@type": "Person", "name": "Senthil Chandrasegaran" },
+          { "@type": "Person", "name": "Hayley Hung" },
+          { "@type": "Person", "name": "Catholijn M. Jonker" },
+          { "@type": "Person", "name": "Catharine Oertel" }
+        ]
       }}
     ]
   }
@@ -115,7 +137,7 @@
   <!-- ===== The through-line ===== -->
   <section class="section wrap">
     <!-- <p class="kicker">The through-line</p> -->
-    <p><h2 class="prose">I build AI that helps you think, not AI that tells you what to do.</h2></p>
+    <h2 class="prose">I build AI that helps you think, not AI that tells you what to do.</h2>
     <p class="prose muted">
       Say you are deciding whether to move abroad for a job. You have been over the salary and the
       visa a hundred times. You have barely let yourself think about leaving your family. A good
